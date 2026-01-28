@@ -8,12 +8,38 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: 'Missing reCAPTCHA token' }, { status: 400 });
   }
 
-  // ✅ Do NOT verify with Google — just forward the token to Formspree
+  // 1️⃣ Verify token with Google
+  try {
+    const verifyRes = await fetch(
+      'https://www.google.com/recaptcha/api/siteverify',
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${token}`,
+      }
+    );
+
+    const verifyData = await verifyRes.json();
+
+    console.log('reCAPTCHA verify response:', verifyData);
+    if (!verifyData.success) {
+      return NextResponse.json({ error: 'reCAPTCHA verification failed' }, { status: 403 });
+    }
+
+    // Optional: check score if using v3
+    if (verifyData.score && verifyData.score < 0.5) {
+      return NextResponse.json({ error: 'Low reCAPTCHA score' }, { status: 403 });
+    }
+  } catch (err) {
+    console.error('reCAPTCHA verify failed:', err);
+    return NextResponse.json({ error: 'Could not verify reCAPTCHA' }, { status: 502 });
+  }
+
+  // 2️⃣ Forward only the clean data to Formspree
   const formData = new URLSearchParams();
   formData.append('name', name);
   formData.append('email', email);
   formData.append('message', message);
-  formData.append('g-recaptcha-response', token); // Formspree will verify this
 
   try {
     const formspreeRes = await fetch('https://formspree.io/f/mreqqnke', {

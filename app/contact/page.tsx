@@ -16,21 +16,23 @@ export default function ContactForm() {
   setStatus('submitting');
 
   const token = await recaptchaRef.current?.executeAsync();
-  recaptchaRef.current?.reset();
-  console.log('reCAPTCHA token:', token);
+if (!token) {
+  setStatus('error');
+  return;
+}
 
   const formData = new FormData(form);
 
-  const res = await fetch('/api/contact', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      name: formData.get('name'),
-      email: formData.get('email'),
-      message: formData.get('message'),
-      token,
-    }),
-  });
+const res = await fetch('/api/contact', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    name: formData.get('name'),
+    email: formData.get('email'),
+    message: formData.get('message'),
+    token, // send to backend for verification
+  }),
+});
 
   if (res.ok) {
     setStatus('success');
