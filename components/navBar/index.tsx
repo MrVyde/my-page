@@ -31,10 +31,10 @@ export default function Navbar() {
   return (
     <header>
       {/* Top Row: Name + Icons + CTA */}
-      <div className="flex items-center justify-between px-6 py-4 border-b border-transparent md:border-zinc-200 dark:md:border-zinc-300">
+      <div className="flex items-center justify-between px-2 md:px-6 py-4 border-b border-transparent md:border-zinc-200 dark:md:border-zinc-300">
         <div className="w-full flex justify-start md:justify-center relative">
           <div className="text-xl md:text-3xl font-bold text-left md:text-center">
-            VHFGJFGKFGKFG
+            MrVyde
           </div>
 
           <div className="absolute right-0 flex items-center gap-4">
@@ -85,7 +85,7 @@ export default function Navbar() {
                 return (
                 <div
                     key={label}
-                    className="relative px-4  py-3 md:hover:bg-gray-200 md:dark:hover:bg-gray-700 transition rounded-sm h-full flex items-end"
+                    className="relative px-1 md:px-4  py-3 md:hover:bg-gray-200 md:dark:hover:bg-gray-700 transition rounded-sm h-full flex items-end"
                 >
                     <Link
                     href={href}

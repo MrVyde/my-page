@@ -8,7 +8,7 @@ function Icon({ icon, label }: { icon: { svg: string; hex: string }; label: stri
   return (
     <div className="flex flex-col items-center">
       <div
-        className="w-8 h-8"
+        className="w-6 h-6"
         dangerouslySetInnerHTML={{
           __html: icon.svg.replace('<svg', `<svg fill="#${icon.hex}"`),
         }}
@@ -55,8 +55,8 @@ export default function About() {
         David Adebisi
       </p>
 
-      <div className="border-2 border-gray-400 rounded-lg shadow-sm p-6 w-full mt-6 max-w-[450px] mx-auto min-h-[500px]">
-          <h1 className="text-2xl md:text-2xl font-bold">
+      <div className="border-2 border-gray-400 rounded-lg shadow-sm p-5 md:p-6 w-full mt-6 max-w-[370px] md:max-w-[450px] mx-auto  min-h-[450px] md:min-h-[500px]">
+          <h1 className="text-1xl md:text-2xl font-bold">
             Full-stack Dev(Frontend Focus)
           </h1>
 

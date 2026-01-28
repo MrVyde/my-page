@@ -16,7 +16,7 @@ function JournalCard({ title, image, preview, readTime }: JournalCardProps) {
     <div className="bg-white rounded-lg shadow-md overflow-hidden w-full max-w-2xl mx-auto mb-10">
          {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src={image} alt={title} className="w-full h-52 object-cover" />
-      <div className="p-6">
+      <div className="pt-2 p-6">
         <h2 className="text-2xl font-semibold mb-4">{title}</h2>
         <p className="text-gray-700 leading-relaxed">{preview}</p>
 
@@ -80,7 +80,7 @@ function JournalCard({ title, image, preview, readTime }: JournalCardProps) {
 
 export default function JournalEntry() {
   return (
-    <div className="min-h-screen bg-gray-100 py-10 px-4 flex flex-col items-center">
+    <div className="min-h-screen bg-gray-100 py-4 md:py-10 px-4 flex flex-col items-center">
       <JournalCard
         title="Stuck in Standby: The Silent Struggle Behind the Screen"
         image="journal/overwhelmed.jpeg"

@@ -4,13 +4,12 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
 import { FaGithub } from 'react-icons/fa';
-import Image from 'next/image';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
 function ResponsivePreviewCarousel() {
   return (
-    <div className="max-w-md mx-auto my-6 bg-white border border-gray-400 rounded-xl shadow-md overflow-hidden">
+    <div className="max-w-md mx-1 md:mx-auto my-6 bg-white border border-gray-400 rounded-xl shadow-md overflow-hidden">
       {/* Swiper Carousel */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <Swiper
@@ -18,7 +17,7 @@ function ResponsivePreviewCarousel() {
         autoplay={{ delay: 3000, disableOnInteraction: false }}
         pagination={{ clickable: true }}
         loop
-        className="rounded-t-xl mt-6"
+        className="rounded-t-xl mt-3"
       >
         
         <SwiperSlide>
@@ -58,7 +57,7 @@ function ResponsivePreviewCarousel() {
         </p>
 
         {/* Tech Stack Icons */}
-        <div className="flex flex-wrap gap-4 text-3xl mb-6">
+        <div className="flex flex-wrap gap-4 text-1xl mb-6">
             <i className="devicon-react-original colored" title="React" />
             <i className="devicon-typescript-plain colored" title="TypeScript" />
             <i className="devicon-zustand-plain colored" title="Zustand" />
