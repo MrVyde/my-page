@@ -1,65 +1,82 @@
-import Image from "next/image";
+import {
+  siNextdotjs,siReact,siTypescript,siJavascript,siTailwindcss,siNodedotjs,
+ siReactquery,siMongodb,siStyledcomponents,siSupabase,siExpress,
+} from 'simple-icons/icons';
 
-export default function Home() {
+
+function Icon({ icon, label }: { icon: { svg: string; hex: string }; label: string }) {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+    <div className="flex flex-col items-center">
+      <div
+        className="w-8 h-8"
+        dangerouslySetInnerHTML={{
+          __html: icon.svg.replace('<svg', `<svg fill="#${icon.hex}"`),
+        }}
+        title={label}
+      />
+      <span className="mt-3 text-base text-center">{label}</span>
     </div>
+
+  );
+}
+
+
+
+
+export default function About() {
+
+  const techIcons = [
+    { icon: siNextdotjs, label: 'Next.js' },
+    { icon: siReact, label: 'React' },
+    { icon: siTypescript, label: 'TypeScript' },
+    { icon: siJavascript, label: 'JavaScript' },
+    { icon: siTailwindcss, label: 'Tailwind CSS' },
+    { icon: siNodedotjs, label: 'Node.js' },
+    { icon: siReactquery, label: 'React Query' },
+    { icon: siMongodb, label: 'MongoDB' },
+    { icon: siStyledcomponents, label: 'Styled Components' },
+    { icon: siSupabase, label: 'Supabase' },
+    { icon: siExpress, label: 'Express.js' },
+  ];
+
+
+  return (
+  <div className="flex flex-col items-center justify-center py-10">
+      {/* Avatar Image */}
+       {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="/avatar/myavatar.png" // Replace with your image path
+        alt="Avatar"
+        className="w-32 h-32 rounded-full object-cover border-4 border-gray-300"
+      />
+
+      {/* Text below the avatar */}
+      <p className="mt-4 text-lg font-semibold text-gray-800 text-center">
+        David Adebisi
+      </p>
+
+      <div className="border-2 border-gray-400 rounded-lg shadow-sm p-6 w-full mt-6 max-w-[450px] mx-auto min-h-[500px]">
+          <h1 className="text-2xl md:text-2xl font-bold">
+            Full-stack Dev(Frontend Focus)
+          </h1>
+
+          {/* Bio Text */}
+          <p className="mt-4 text-base md:text-lg leading-relaxed">
+            I am a software developer with expertise in Next.js. I have experience in building scalable,
+            secure and reliable web applications using various frameworks and technologies.
+            I enjoy solving complex problems and learning new skills. I am passionate about creating
+            high-quality code that follows best practices and industry standards. 
+            I’m strengthening my Node.js and Express knowledge to take on more complete full-stack challenges.
+          </p>
+          <h1 className="text-2xl md:text-2xl font-bold pt-8">
+            Tech stack:
+          </h1>
+          <div className="grid grid-cols-4 gap-8 px-1 py-6 max-w-5xl mx-auto">
+              {techIcons.map(({ icon, label }) => (
+                <Icon key={label} icon={icon} label={label} />
+              ))}
+          </div>
+      </div>
+  </div>
   );
 }
