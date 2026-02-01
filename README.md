@@ -12,9 +12,9 @@ Vyde is my personal portfolio site built with **Next.js**, **TypeScript**, and *
 
 ## Tech Stack
 
-- [Next.js](https://nextjs.org/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
+- [Next.js]
+- [TypeScript]
+- [Tailwind CSS]
 - [Formspree](https://formspree.io/) (for contact form delivery)
 - [Google reCAPTCHA v2 Invisible](https://www.google.com/recaptcha/about/)
 
@@ -24,7 +24,7 @@ The contact form uses **Google reCAPTCHA v2 Invisible** to prevent spam and bots
 
 ## Deployment
 
-The site is ready to be deployed on [Vercel](https://vercel.com/), with environment variables for:
+The site is ready to be deployed on [Vercel](https://mr-vyde.vercel.app/), with environment variables for:
 
 ```env
 NEXT_PUBLIC_RECAPTCHA_SITE_KEY=your_site_key

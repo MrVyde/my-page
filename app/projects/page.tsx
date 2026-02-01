@@ -11,7 +11,6 @@ function ResponsivePreviewCarousel() {
   return (
     <div className="max-w-md mx-1 md:mx-auto my-6 bg-white border border-gray-400 rounded-xl shadow-md overflow-hidden">
       {/* Swiper Carousel */}
-      {/* eslint-disable-next-line @next/next/no-img-element */}
       <Swiper
         modules={[Autoplay, Pagination]}
         autoplay={{ delay: 3000, disableOnInteraction: false }}
@@ -19,7 +18,7 @@ function ResponsivePreviewCarousel() {
         loop
         className="rounded-t-xl mt-3"
       >
-        
+
         <SwiperSlide>
             {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
@@ -71,13 +70,17 @@ function ResponsivePreviewCarousel() {
         {/* Action Buttons */}
         <div className="flex space-x-4">
           <a
-            href="#"
+            href="https://vyde-store.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded font-medium transition"
           >
             Live Preview
           </a>
           <a
-            href="#"
+            href="https://github.com/MrVyde/E-commerce.git"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-gray-800 hover:bg-gray-900 text-white px-4 py-2 rounded font-medium transition flex items-center space-x-2"
             >
             <FaGithub className="text-lg" />

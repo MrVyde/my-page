@@ -16,17 +16,19 @@ const navItems = [
   
 ];
 
+const shareOptions = [
+    { label: 'Copy link', action: () => navigator.clipboard.writeText(window.location.href) },
+    { label: 'Send a mail', action: () => window.location.href = '/contact' },
+    { label: 'Download Resume', action: () => window.open('/pdf/resume.pdf', '_blank') },
+    { label: 'GitHub', action: () => window.open('https://github.com/MrVyde', '_blank') },
+    { label: 'LinkedIn', action: () => window.open('https://linkedin.com/in/david-adebisi-35655526a', '_blank') },
+  ];
+
 export default function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
-  const shareOptions = [
-    { label: 'Copy link', action: () => navigator.clipboard.writeText(window.location.href) },
-    { label: 'Send a mail', action: () => window.location.href = '/contact' },
-    { label: 'Download Resume', action: () => window.open('/resume.pdf', '_blank') },
-    { label: 'GitHub', action: () => window.open('https://github.com/MrVyde', '_blank') },
-    { label: 'LinkedIn', action: () => window.open('https://linkedin.com/in/david-adebisi-35655526a', '_blank') },
-  ];
+  
 
   return (
     <header>
