@@ -122,7 +122,7 @@ export default function FullResume() {
       </section>
 
       {/* Education */}
-      <section>
+      {/* <section>
         <h3 className="text-lg font-semibold mb-2">Education</h3>
         <p className="text-base">
           <strong>Bachelor of Science in Management and Accounting</strong><br />
@@ -130,7 +130,7 @@ export default function FullResume() {
           Focus: Management and Accountingt<br />
           2015 – 2019
         </p>
-      </section>
+      </section> */}
     </div>
   );
 }
