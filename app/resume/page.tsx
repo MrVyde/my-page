@@ -26,7 +26,7 @@ export default function FullResume() {
 
         {/* LinkedIn */}
         <a
-          href="https://linkedin.com/in/david-adebisi-35655526a"
+          href="https://www.linkedin.com/in/mr-vyde"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 text-blue-600 hover:underline"
