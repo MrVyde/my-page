@@ -1,127 +1,336 @@
-import { FaLinkedin, FaGithub, FaEnvelope, FaPhone } from 'react-icons/fa';
-
-
+import {
+  FaLinkedin,
+  FaGithub,
+  FaEnvelope,
+  FaPhone,
+} from "react-icons/fa";
 
 export default function FullResume() {
   return (
     <div className="max-w-3xl mx-auto p-6 border border-gray-300 rounded-lg my-8 shadow-sm bg-white text-gray-800">
       {/* Header */}
       <header className="mb-6">
-      <h1 className="text-3xl font-bold">David Adebisi</h1>
-      <div className="flex flex-col sm:flex-row sm:items-center sm:gap-6 mt-2 text-sm space-y-2 sm:space-y-0">
-        {/* Email */}
-        <a
-          href="mailto:mrvyde@gmail.com"
-          className="flex items-center gap-2 text-gray-700 hover:text-blue-600"
-        >
-          <FaEnvelope className="text-red-500" />
-          mrvyde@gmail.com
-        </a>
+        <h1 className="text-3xl font-bold">David Adebisi</h1>
 
-        {/* Phone */}
-        <span className="flex items-center gap-2 text-gray-700">
-          <FaPhone className="text-green-600" />
-          (+234) 810–202-4488
-        </span>
+        <div className="flex flex-col sm:flex-row sm:flex-wrap sm:items-center sm:gap-6 mt-2 text-sm space-y-2 sm:space-y-0">
+          {/* Email */}
+          <a
+            href="mailto:mrvyxfhdhxchde@gmail.com"
+            className="flex items-center gap-2 text-gray-700 hover:text-blue-600"
+          >
+            <FaEnvelope className="text-red-500" />
+            mrvyde@gmail.com
+          </a>
 
-        {/* LinkedIn */}
-        <a
-          href="https://www.linkedin.com/in/mr-vyde"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 text-blue-600 hover:underline"
-        >
-          <FaLinkedin />
-          LinkedIn
-        </a>
+          {/* Phone */}
+          <span className="flex items-center gap-2 text-gray-700">
+            <FaPhone className="text-green-600" />
+            (+234) 810–022-4488
+          </span>
 
-        {/* GitHub */}
-        <a
-          href="https://github.com/MrVyde"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 text-gray-800 hover:underline"
-        >
-          <FaGithub />
-          GitHub
-        </a>
-      </div>
-    </header>
+          {/* LinkedIn */}
+          <a
+            href="https://www.linkedin.com/in/mr-vyde"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-blue-600 hover:underline"
+          >
+            <FaLinkedin />
+            LinkedIn
+          </a>
 
-      {/* Title */}
+          {/* GitHub */}
+          <a
+            href="https://github.com/MrVyde"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-gray-800 hover:underline"
+          >
+            <FaGithub />
+            GitHub
+          </a>
+        </div>
+      </header>
+
+      {/* Professional Summary */}
       <section className="mb-6">
-        <h2 className="text-xl font-semibold">Junior Full Stack Developer(Front-End Focused)</h2>
-<p className="my-2 text-base leading-relaxed">
-  Front-End Focused Junior Full-Stack Developer passionate about building responsive, scalable web applications using React, TypeScript, and Supabase. I specialize in clean, user-friendly interfaces and implement full-stack features like authentication, database integration, and API interactions.
-</p>
-<p>
-  My project experience spans e-commerce and digital health platforms, with a strong emphasis on responsive design, testing, and reliable user experiences. I thrive in agile teams and i am currently deepening my Node.js and Express skills to tackle more advanced full-stack challenges.
-</p>
+        <h2 className="text-xl font-semibold">
+          Full-Stack Developer
+        </h2>
 
+        <p className="mt-2 text-base leading-relaxed">
+          Full-stack developer with 3+ years of professional
+          experience spanning frontend engineering, backend
+          development, and software quality assurance. I build
+          responsive applications and database-driven systems
+          using React, Next.js, TypeScript, Node.js, Express,
+          Prisma, PostgreSQL, and Supabase.
+        </p>
+
+        <p className="mt-2 text-base leading-relaxed">
+          Experienced in building authentication workflows,
+          REST APIs, database operations, middleware, real-time
+          communication, and responsive interfaces. I approach
+          development with a focus on reliable architecture,
+          maintainable code, performance, and dependable user
+          experiences.
+        </p>
       </section>
 
       {/* Work Experience */}
       <section className="mb-8">
-        <h3 className="text-lg font-semibold mb-4">Work Experience</h3>
+        <h3 className="text-lg font-semibold mb-4">
+          Work Experience
+        </h3>
 
+        {/* TechWave */}
         <div className="mb-6">
-          <h4 className="font-bold">Junior Full Stack Developer(Front-End Focused)</h4>
-          <p className="text-sm text-gray-600">TechWave Solutions ・ 03/2024 – 05/2025</p>
-          <ul className="list-disc list-inside mt-2 text-base space-y-1">
-             <li>Built and maintained a full-stack e-commerce platform using React and Supabase, supporting authentication, database operations, and real-world purchase flows.</li>
-              <li>Developed responsive, accessible, and reusable UI components with state management and API integrations for product listings, carts, and checkout.</li>
-              <li>Integrated backend services for user accounts, product management, and order workflows using Supabase APIs.</li>
-              <li>Improved performance and user experience through frontend optimizations, structured queries, and bug fixes.</li>
-              <li>Collaborated in an agile team to deliver features, perform manual testing, and ensure release quality.</li>
+          <h4 className="font-bold">
+            Full Stack Developer
+          </h4>
 
+          <p className="text-sm text-gray-600">
+            TechWave Solutions ・ 03/2024 – 05/2025
+          </p>
+
+          <ul className="list-disc list-inside mt-2 text-base space-y-1">
+            <li>
+              Built and maintained a full-stack e-commerce
+              platform using React, Supabase, and PostgreSQL,
+              supporting authentication, database operations,
+              product workflows, and purchase flows.
+            </li>
+
+            <li>
+              Implemented authentication, middleware, and API
+              integrations for user, product, cart, and order
+              workflows.
+            </li>
+
+            <li>
+              Developed responsive and reusable frontend
+              components with structured state management and
+              reliable API interactions.
+            </li>
+
+            <li>
+              Optimized frontend performance and backend queries
+              to improve application responsiveness and support
+              scalable data operations.
+            </li>
+
+            <li>
+              Collaborated within an Agile workflow to deliver
+              features, troubleshoot issues, perform manual
+              testing, and maintain release quality.
+            </li>
           </ul>
         </div>
 
+        {/* QA */}
         <div className="mb-6">
-            <h4 className="font-bold">Software QA Tester</h4>
-            <p className="text-sm text-gray-600">Freelance ・ 06/2023 – 11/2023</p>
-            <ul className="list-disc list-inside mt-2 text-base space-y-1">
-                <li>Tested mobile and web applications for brands including Facebook, Instagram, WhatsApp, and Sidekick Health — a digital health platform supporting chronic care, mental wellness, and lifestyle improvement.</li>
-                <li>Validated features across multiple health programs, including maternal care, habit tracking, and mindfulness tools.</li>
-                <li>Performed manual testing across devices to ensure functionality, responsiveness, and accessibility.</li>
-                <li>Logged bugs and usability issues in structured spreadsheets with detailed reproduction steps.</li>
-                <li>Uploaded screen recordings and walkthrough videos to confirm test coverage and verify issue resolution.</li>
-                <li>Collaborated with QA leads to retest fixed issues and ensure regression stability.</li>
-                <li>Maintained high accuracy while testing edge cases, user flows, and error handling scenarios.</li>
-            </ul>
+          <h4 className="font-bold">
+            Software QA Tester
+          </h4>
+
+          <p className="text-sm text-gray-600">
+            Freelance ・ 06/2023 – 11/2023
+          </p>
+
+          <ul className="list-disc list-inside mt-2 text-base space-y-1">
+            <li>
+              Tested mobile and web applications for brands
+              including Facebook, Instagram, WhatsApp, and
+              Sidekick Health.
+            </li>
+
+            <li>
+              Validated features across digital health programs
+              including chronic care, maternal health, habit
+              tracking, and mindfulness experiences.
+            </li>
+
+            <li>
+              Performed cross-device manual testing to verify
+              functionality, responsiveness, accessibility, and
+              error handling.
+            </li>
+
+            <li>
+              Identified and documented bugs with detailed
+              reproduction steps, screenshots, and screen
+              recordings.
+            </li>
+
+            <li>
+              Collaborated with QA leads to retest resolved
+              issues and verify regression stability across
+              application releases.
+            </li>
+          </ul>
         </div>
 
+        {/* Innovatech */}
         <div>
-          <h4 className="font-bold">Front-End Developer</h4>
-          <p className="text-sm text-gray-600">Innovatech Solutions ・ 12/2022 – 05/2023</p>
+          <h4 className="font-bold">
+            Front-End Developer
+          </h4>
+
+          <p className="text-sm text-gray-600">
+            Innovatech Solutions ・ 12/2022 – 05/2023
+          </p>
+
           <ul className="list-disc list-inside mt-2 text-base space-y-1">
-            <li>Assisted in the development of a responsive web application using HTML, CSS, and JavaScript, enhancing mobile accessibility and increasing traffic by 10%.</li>
-            <li>Participated in Agile sprints, contributing to the successful delivery of five key features ahead of schedule, improving project timelines by 15%.</li>
-            <li>Integrated third-party APIs to enhance application functionality, resulting in a 12% increase in user satisfaction and engagement.</li>
+            <li>
+              Assisted in developing responsive web
+              applications using HTML, CSS, and JavaScript,
+              improving mobile accessibility and contributing
+              to increased website traffic.
+            </li>
+
+            <li>
+              Participated in Agile sprints and contributed to
+              the delivery of five key features ahead of
+              schedule.
+            </li>
+
+            <li>
+              Integrated third-party APIs to enhance application
+              functionality and improve the overall user
+              experience.
+            </li>
           </ul>
         </div>
       </section>
 
-      {/* Skills & Competencies */}
+      {/* Technical Skills */}
       <section className="mb-8">
-        <h3 className="text-lg font-semibold mb-2">Skills & Competencies</h3>
-        <ul className="list-disc list-inside text-base space-y-1">
-          <li>Full Stack Application Architecture</li>
-          <li>RESTful API Design and Development</li>
-          <li>Database Schema Design and Optimization</li>
-          <li>Responsive Web Development</li>
-          <li>Agile Development Methodology</li>
-          <li>Performance Optimization Analysis</li>
-          <li>Technical Problem Solving</li>
-          <li>React.js</li>
-          <li>Next.js</li>
-          <li>Node.js</li>
-          <li>PostgreSQL</li>
-          <li>AI-Assisted Code Development</li>
-        </ul>
+        <h3 className="text-lg font-semibold mb-2">
+          Technical Skills
+        </h3>
+
+        <div className="space-y-2 text-base">
+          <p>
+            <strong>Languages:</strong>{" "}
+            JavaScript, TypeScript, SQL, HTML, CSS
+          </p>
+
+          <p>
+            <strong>Frontend:</strong>{" "}
+            React, Next.js, Tailwind CSS, React Query
+          </p>
+
+          <p>
+            <strong>Backend:</strong>{" "}
+            Node.js, Express.js, REST APIs, Socket.IO
+          </p>
+
+          <p>
+            <strong>Databases & ORM:</strong>{" "}
+            PostgreSQL, Supabase, MongoDB, Prisma
+          </p>
+
+          <p>
+            <strong>Engineering:</strong>{" "}
+            Authentication, Middleware, API Integration,
+            Database Design, State Management, Performance
+            Optimization, Responsive Development
+          </p>
+
+          <p>
+            <strong>Testing:</strong>{" "}
+            Manual Testing, Regression Testing, Cross-Device
+            Testing, Accessibility Testing, Bug Reporting
+          </p>
+        </div>
       </section>
 
-      {/* Education */}
+      {/* Selected Projects */}
+      <section>
+        <h3 className="text-lg font-semibold mb-4">
+          Selected Projects
+        </h3>
+
+        {/* MeChat */}
+        <div className="mb-4">
+          <div className="flex flex-col sm:flex-row sm:justify-between">
+            <h4 className="font-bold">
+              MeChat · Full-Stack Real-Time Messaging
+            </h4>
+
+            <a
+              href="https://me-chat-eta.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-blue-600 hover:underline"
+            >
+              Live Demo
+            </a>
+          </div>
+
+          <p className="text-base mt-1">
+            Built a real-time messaging platform with Next.js,
+            TypeScript, Node.js, Express, Prisma, PostgreSQL,
+            Socket.IO, and React Query. Implemented
+            authentication, direct and group conversations,
+            presence tracking, optimistic updates, search, and
+            profile management.
+          </p>
+        </div>
+
+        {/* CrowdQuest */}
+        <div className="mb-4">
+          <div className="flex flex-col sm:flex-row sm:justify-between">
+            <h4 className="font-bold">
+              Crowd-Quest · Full-Stack Interactive Game
+            </h4>
+
+            <a
+              href="https://crowd-quest.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-blue-600 hover:underline"
+            >
+              Live Demo
+            </a>
+          </div>
+
+          <p className="text-base mt-1">
+            Built a responsive hidden-character game using
+            Next.js, TypeScript, Express, Prisma, and REST APIs.
+            Implemented session-based gameplay, coordinate-based
+            character detection, API validation, progress
+            tracking, completion states, and touch-friendly
+            interactions.
+          </p>
+        </div>
+
+        {/* E-commerce */}
+        <div>
+          <div className="flex flex-col sm:flex-row sm:justify-between">
+            <h4 className="font-bold">
+              Full-Stack E-Commerce Platform
+            </h4>
+
+            <a
+              href="https://vyde-store.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-blue-600 hover:underline"
+            >
+              Live Demo
+            </a>
+          </div>
+
+          <p className="text-base mt-1">
+            Built an e-commerce application using React,
+            TypeScript, Zustand, React Query, Tailwind CSS, and
+            Supabase, including authentication, cart management,
+            product workflows, and database integration.
+          </p>
+        </div>
+      </section>
+    {/* Education */}
       {/* <section>
         <h3 className="text-lg font-semibold mb-2">Education</h3>
         <p className="text-base">

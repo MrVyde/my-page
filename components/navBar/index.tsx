@@ -81,7 +81,7 @@ export default function Navbar() {
 
 
       {/* Navigation Links */}
-      <nav className="flex justify-start md:justify-center gap-2 items-end  h-11 border-b border-gray-900 dark:border-zinc-300">
+      <nav className="flex justify-start md:justify-center gap-2 items-end bg-[#FAF7F2] h-11 border-b border-gray-900 dark:border-zinc-300">
             {navItems.map(({ label, href }) => {
                 const isActive = pathname === href;
                 return (
