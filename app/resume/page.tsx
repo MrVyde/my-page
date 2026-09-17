@@ -15,7 +15,7 @@ export default function FullResume() {
         <div className="flex flex-col sm:flex-row sm:flex-wrap sm:items-center sm:gap-6 mt-2 text-sm space-y-2 sm:space-y-0">
           {/* Email */}
           <a
-            href="mailto:mrvyxfhdhxchde@gmail.com"
+            href="mailto:mrvyde@gmail.com"
             className="flex items-center gap-2 text-gray-700 hover:text-blue-600"
           >
             <FaEnvelope className="text-red-500" />
@@ -25,7 +25,7 @@ export default function FullResume() {
           {/* Phone */}
           <span className="flex items-center gap-2 text-gray-700">
             <FaPhone className="text-green-600" />
-            (+234) 810–022-4488
+            (+234) 81–0202-4488
           </span>
 
           {/* LinkedIn */}
