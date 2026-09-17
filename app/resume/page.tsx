@@ -25,7 +25,7 @@ export default function FullResume() {
           {/* Phone */}
           <span className="flex items-center gap-2 text-gray-700">
             <FaPhone className="text-green-600" />
-            (+234) 81–0202-4488
+            (+234) 810–202-4488
           </span>
 
           {/* LinkedIn */}
